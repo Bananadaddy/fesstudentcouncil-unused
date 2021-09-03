@@ -13,10 +13,11 @@ header {
     width: 100%;
     height: 60px;
     background-color: white;
-    top: 10px;
+    top: 0;
     left: 0;
     overflow: hidden;
-    z-index: 2;
+    padding-top: 10px;
+    z-index: 5;
 }
 
 ul {
@@ -54,15 +55,15 @@ li a:hover:not(.active) {
 .main {
     position: relative;
     width: 100%;
-    height: 600px;
-    top: 23px;
-    z-index: 1;
+    height: 800px;
+    top: 20px;
+    z-index: 0;
     left: 0;
     right: 0;
-    background-color: whitesmoke;
+    background-image: url(ad-astra.jpg);
 }
 
-.title {
+.main h1{
     font-size: 75px;
     font-family: AlteHaas;
     font-weight: 10px;
@@ -73,15 +74,37 @@ li a:hover:not(.active) {
 .first {
     background-color: transparent;
     position: absolute;
-    left: 35%;
-    top: 100px;
+    left: 10%;
+    top: 40px;
     right: 0;
-    width: 350px;
-    height: 500px;
+    width: 175px;
+    height: 250px;
     filter: drop-shadow(10px 10px 10px black);
+    transition: 0.5s;
+    z-index: 2;
 }
 
 .first:hover {
-    filter: drop-shadow(5px 10px 5px black);
+    top: 25px;
+}
 
+.first:hover + #draco {
+    display: block;
+}
+
+#draco {
+    width: 150px;
+    height: 150px;
+    left: 325px;
+    top: 50px;
+    background-color: white;
+    border-radius: 10px;
+    display: none;
+    padding: 10px;
+    position: absolute;
+    z-index: 3;
+}
+
+#draco h2 {
+    font-family: AlteHaas;
 }
